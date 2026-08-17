@@ -7,9 +7,14 @@ data = {
     "performancescore": [82, 91, 75, 88, 79, 85, 95, 89, 84, 72]
 }
 
-df = pd.DataFrame(data) 
-
+df = pd.DataFrame(data)
 print(df)
-print(df.describe())
-print(f'shape :{df.shape}')
-print(f'columns :{df.columns}')
+print("-"*120)
+
+df["bonus"] = df["salary"]*0.1
+print(df)
+print("-"*120)
+
+df.insert(0,"empid",[11,22,33,44,55,66,77,88,99,100])
+print(df)
+print("-"*120)
